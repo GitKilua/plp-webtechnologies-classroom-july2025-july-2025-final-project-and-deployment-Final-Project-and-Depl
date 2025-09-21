@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeTickets - Movies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">AnimeTickets 🎟️</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html" class="active">Movies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="page-title">Available Anime Movies</h2>
+    <section class="movie-grid">
+      <article class="movie-card fade-in">
+        <img src="https://4kwallpapers.com/images/walls/thumbs_2t/23652.jpg" alt="Demon Slayer">
+        <h3>Demon Slayer</h3>
+      </article>
+      <article class="movie-card fade-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsi_DbnSEL3Bni38qfvc6RCOHYwSzSj_pqi3uPwffCnhuAvvN&s" alt="Attack on Titan">
+        <h4>Attack on Titan</h4>
+        <button onclick="openBooking('Attack on Titan')">Book Now!</button>
+      </article>
+      <article class="movie-card fade-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR8AU0EZftAhkRpuxZPzzR--ICMQws2aMm1QNUTHQM67X1QS4&s" alt="My Hero Academia">
+        <h5>My Hero Academia</h5>
+        <button onclick="openBooking('My Hero Academia')">Book Now!</button>
+      </article>  
+                  <style>
+  .openBooking {
+    background-color: #ff4757; /* bold coral red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .book-now:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    background-color: #ff6b81; /* lighter coral on hover */
+  }
+</style>
+
+    </section>
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content slide-up">
+      <span class="close" onclick="closeBooking()">&times;</span>
+      <h2 id="movieTitle"></h2>
+      <form onsubmit="return confirmBooking(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="number" min="1" max="10" placeholder="Tickets" required>
+        <button  onclick="document.getElementById('payment.html').click()">Confirm & Pay</button>
+
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AnimeTickets</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

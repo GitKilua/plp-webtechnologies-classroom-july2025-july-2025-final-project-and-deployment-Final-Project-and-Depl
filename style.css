@@ -1,0 +1,347 @@
+/* 🌸 Body with Anime Wallpaper */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+background: url("https://images4.alphacoders.com/136/thumbbig-1369866.webp") no-repeat center center fixed;
+  background-size: cover;
+
+  font-family: 'Poppins', sans-serif;
+  color: #f5f5f5; /* Soft white for dark backgrounds */
+  background-color: #1e1e1e; /* Deep grey or black backdrop */
+
+}
+
+/* 🌸 Hero Section */
+.hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* 🌸 Ticket Form */
+.ticket-section {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.ticket-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  text-align: left;
+}
+
+.ticket-form input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.ticket-form button {
+  width: 100%;
+  background: #ffd700;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ticket-form button:hover {
+  background: #ffbf00;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6); /* subtle transparency over wallpaper */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700; /* gold for anime vibe */
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff; /* clean white text */
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffd700;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffd700; /* gold on hover */
+}
+
+/* Active Link */
+.nav-links a.active {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.collection-images {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.collection-images img {
+  width: 100px;   /* small thumbnail size */
+  height: 140px;  /* fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.collection-images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+}
+.anime-card {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.anime-name {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+.collection-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+a {
+  color: #f5deb3; /* Creamy wheat tone */
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+.collection-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between images */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.collection-images img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.collection-images img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+a:hover {
+  color: #fff8dc; /* Lighter cream on hover */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #f5deb3; /* Keep visited links consistent */
+}
+/* Smooth transition for links and buttons */
+a, button {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover, button:hover {
+  background-color: #ff6f61; /* example hover color */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Navigation hamburger button transition */
+.hamburger {
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation for hero content */
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpAnimation 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideUpAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Movie cards hover effect */
+.movie-collection-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: #384305;
+  box-shadow: burlywood;
+}
+
+.movie-collection-card:hover {
+  box-shadow: burlywood;
+  transform: translateY(-5px);
+}
+
+/* Anime card image hover */
+.anime-card img {
+  transition: transform 0.4s ease;
+  border-radius: 6px;
+}
+
+.anime-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Button style improvements */
+button {
+  background-color: #ff6f61;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255,111,97,0.4);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,111,97,0.6);
+}
+
+/* Input focus effect */
+input:focus {
+  border-color:red;
+  box-shadow: red;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}

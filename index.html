@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anime Movie Tickets - Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- 🌸 Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">AnimeTickets</div>
+      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="movies.html">Movies On</a></li>
+        <li><a href="payment.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🌸 Hero Section -->
+  <section class="hero fade-in">
+    <div class="hero-content slide-up">
+      <h1>🎬 Welcome to AnimeTickets!</h1>
+      <p>Book your seats for the hottest anime movies of the year!</p>
+    </div>
+  </section>
+
+  <!-- 🌸 Ticket Application -->
+  <main>
+    <section class="ticket-section fade-in">
+      <h2>🎟️ Apply for Tickets</h2>
+      <form id="ticketForm" class="ticket-form" onsubmit="return goToMovies(event)">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="2" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="0712345678" />
+
+        <button type="submit">Continue to Movies</button>
+ 
+      </form>
+    </section>
+
+    <!-- 🌸 Movie Collections -->
+    <section class="movies-gallery fade-in">
+      <h2>Available Anime Movie Collections</h2>
+      <div class="movies-grid">
+        <a href="movies.html" class="movie-collection-card">
+            <h3>Shonen Trio Collection</h3>
+            
+         <div class="collection-images">
+            <div class="anime-card">
+  <img src="https://4kwallpapers.com/images/walls/thumbs_2t/23907.jpg" alt="Sakamoto Days">
+  <p class="anime-name">Sakamoto Days</p>
+</div>
+
+<div class="anime-card">
+  <img src="https://4kwallpapers.com/images/walls/thumbs_2t/11219.jpg" alt="Black Clover">
+  <p class="anime-name">Black Clover</p>
+</div>
+
+<div class="anime-card">
+  <img src="https://4kwallpapers.com/images/walls/thumbs_2t/23652.jpg" alt="Demon Slayer">
+  <p class="anime-name">Demon Slayer</p>
+</div>
+          </div>
+          
+          <p>Sakamoto Days, Black Clover, Demon Slayer</p>
+        </a>
+
+        <a href="action-duo.html" class="movie-collection-card">
+          <div class="collection-images">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsi_DbnSEL3Bni38qfvc6RCOHYwSzSj_pqi3uPwffCnhuAvvN&s" alt="Attack on Titan" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR8AU0EZftAhkRpuxZPzzR--ICMQws2aMm1QNUTHQM67X1QS4&s" alt="My Hero Academia" />
+          </div>
+          <h3>Action Duo Collection</h3>
+          <p>Attack on Titan, My Hero Academia</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🌸 Footer -->
+  <footer>
+    <p>© 2025 AnimeTickets. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
